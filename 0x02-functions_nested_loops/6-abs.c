@@ -1,31 +1,21 @@
-#include "main.h"
-/**
- * print_sign - prints the sign of a numver
- *
- * @n: the int to check
- *
- * Return: 1 and prints + if n is greater than zero
- *
- * 0 and prints 0 if n is zero
- *
- * -1 and prints - if n is less than zero
- */
-int print_sign(int n)
-{
-	if (n > 0)
-	{
-		_putchar('+');
-		return (1);
-	}
-	else if (n == 0)
-	{
-		_putchar(48);
-		return (0);
-	}
-	else if (n < 0)
-	{
-		_putchar('-');
-	}
-	return (-1);
-}
+#include "holberton.h"
 
+/**
+ * _abs - Compute the absolute value of an integer number
+ * @n: Number to calcule it the absolute value
+ *
+ * Return: Absolute value of an integer.
+ */
+
+int _abs(int n)
+{
+	if (n >= 0)
+	{
+		n = n;
+	}
+	else
+	{
+		n = n * -1;
+	}
+	return (n);
+}
