@@ -1,24 +1,20 @@
-#include holberton.h
+#include "main.h"
 
 /**
- *_strcat - Write a function that concatenates two strings.
- *
- *@dest: This is the output dest
- *@src: This is the input source
- *
- * Return: This return to dest, that concatenates two strings
+ * _strcat - concatenate two strings
+ * @dest: destination string
+ * @src: source string
+ * Return: pointer to string
  */
 
 char *_strcat(char *dest, char *src)
 {
-int i, j;
+	int index = 0;
+	int dest_len = 0;
 
-for (i = 0; dest[i] != '\0'; i++)
-;
-for (j = 0; src[j] != '\0'; j++)
-{
-dest[i] = src[j];
-i++;
-}
-return (dest);
+	while (dest[index++])
+		dest_len++;
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
+	return (dest);
 }
