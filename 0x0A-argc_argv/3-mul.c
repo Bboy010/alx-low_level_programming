@@ -10,9 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-	int count, num0, num1, res;
+	int count, num1, num2, res;
 
-	count = num0 = num1 = res = 0;
+	count = num1 = num2 = res = 0;
 	if (argc > 0)
 	{
 		while (count < argc)
@@ -20,16 +20,16 @@ int main(int argc, char *argv[])
 			if (argc == 3)
 			{
 				if (count == 1)
-					num0 = atoi(argv[count]);
-				else if (count == 2)
 					num1 = atoi(argv[count]);
+				else if (count == 2)
+					num2 = atoi(argv[count]);
 			}
 			else
 			{
 				printf("Error\n");
 				return (1);
 			}
-			res = (num * num1);
+			res = (num1 * num2);
 			count++;
 		}
 		printf("%d\n", res);
