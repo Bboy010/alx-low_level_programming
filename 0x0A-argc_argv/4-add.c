@@ -1,77 +1,52 @@
 #include <stdio.h>
-
 #include <stdlib.h>
-
-
+#include <string.h>
 
 /**
- *
- *  * main - program that adds positive numbers.
- *
- *   * @argc: number of arguments
- *
- *    * @argv: array with the arguments
- *
- *     *
- *
- *      * Return: always 0
- *
- *       **/
+ * check_digit - checks if a given char is number or not
+ * @a: input char
+ * Return: int
+ */
 
+int check_digit(char *a)
+{
+	int i, num, len;
 
+	i = 0;
+	num = 0;
+	len = strlen(a);
+	while (i < len)
+	{
+		if (a[i] < '0' || a[i] > '9')
+			return (-1);
+		num = num * 10 + (a[i] - '0');
+		i++;
+	}
+	return (num);
+}
+
+/**
+ * main -  program that adds positive numbers
+ * @argc: arguement count
+ * @argv: argument vector
+ * Return: int
+ */
 
 int main(int argc, char *argv[])
-
 {
+	int i, num, res;
 
-		int i, suma = 0, res = 0;
-
-			char c[] = "Error", *find_letter;
-
-
-
-				if (argc > 1)
-
-						{
-
-									for (i = 1; i < argc; i++)
-
-												{
-
-																find_letter = argv[i];
-
-																			while (*find_letter != 0)
-
-																							{
-
-																												if (*find_letter < 47 || *find_letter > 57)
-
-																																	{
-
-																																							printf("%s\n", c);
-
-																																												return (1);
-
-																																																}
-
-																																find_letter++;
-
-																																			}
-
-																						res = atoi(argv[i]);
-
-																									suma += res;
-
-																											}
-
-											printf("%d\n", suma);
-
-												}
-
-					else
-
-								printf("%d\n", 0);
-
-						return (0);
-
+	res = 0;
+	for (i = 1; i < argc; i++)
+	{
+		num = check_digit(argv[i]);
+		if (num == -1)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		res += num;
+	}
+	printf("%d\n", res);
+	return (0);
 }
