@@ -1,23 +1,46 @@
 #include <stdio.h>
 
-/*
- * main - prints the number of arguments that are passed to it
+#include "main.h"
+
+
+/**
  *
- * @argc: arguments numbers
+ * main - Prints the number of arguments passed into main
  *
- * @argv: array with argument
+ * @argc: Number of command line arguments
  *
- *  Return: Always 0 (Success)
+ *  @argv: Array name
+ *
+ *  Return: 0
  *
  **/
 
+
 int main(int argc, char *argv[])
+
 {
 
-		(void)argv;
+		int i;
 
-			printf("%d\n", argc - 1);
 
-				return (0);
+
+			if (argc == 1)
+				printf("%d\n", argc - 1);
+
+			else
+			{
+
+									for (i = 0; *argv; i++, argv++)
+										;
+
+
+
+											printf("%d\n", i - 1);
+
+												}
+
+
+
+					return (0);
 
 }
