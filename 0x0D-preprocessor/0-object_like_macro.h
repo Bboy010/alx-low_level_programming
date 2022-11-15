@@ -4,7 +4,7 @@
 /*
  * Auth: HonGo
  * Des: Header file that defines a macro named
- * /
+ */
 
 #define SIZE 1024
 
