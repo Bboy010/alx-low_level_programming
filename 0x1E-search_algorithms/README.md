@@ -1,10 +1,3 @@
-sh: 1: :x: not found
-
-- Implementation of various types of search algorithms and stated the corresponding space/time
-complexities for each.
-
-## Tests :heavy_check_mark:
-
 * [tests](./tests): Test Files
 
 ## Header File :file_folder:
